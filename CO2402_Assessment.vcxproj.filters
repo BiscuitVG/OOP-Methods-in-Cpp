@@ -36,6 +36,9 @@
     <ClCompile Include="WarmCold.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RGB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Device.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WarmCold.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RGB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
