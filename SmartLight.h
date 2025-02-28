@@ -7,6 +7,7 @@
 #include "Device.h"
 
 class SmartLight : public Device {
+	//father class
 private:
 
 	int m_brightness; // 0-100 level
