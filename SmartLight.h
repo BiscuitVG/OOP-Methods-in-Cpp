@@ -9,11 +9,11 @@
 class SmartLight : public Device {
 private:
 
-	int m_brightness; // 0-100 level
+	int mBrightness; // 0-100 level
 
 public:
 
-	//setter and getter declaration for m_brightness
+	//setter and getter declaration for mBrightness
 	void setBrightness(int level);
 	int getBrightness();
 
