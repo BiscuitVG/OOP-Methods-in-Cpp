@@ -9,16 +9,16 @@
 class SecurityCamera : public Device {
 private:
 
-	std::string m_quality; //cam quality
-	std::string m_power; //power mode
+	std::string mQuality; //cam quality
+	std::string mPower; //power mode
 
 public:
 
-	//setter and getter declaration for m_quality
+	//setter and getter declaration for mQuality
 	void setQuality(std::string quality);
 	std::string getQuality();
 
-	//setter and getter declaration for m_power
+	//setter and getter declaration for mPower
 	void setPower(std::string power);
 	std::string getPower();
 

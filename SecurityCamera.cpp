@@ -16,20 +16,20 @@ SecurityCamera::SecurityCamera(int id, std::string deviceName, std::string devic
 	setPower(power);
 }
 
-//setter and getter definitions for m_quality
+//setter and getter definitions for mQuality
 void SecurityCamera::setQuality(std::string quality) {
-	m_quality = quality;
+	mQuality = quality;
 }
 std::string SecurityCamera::getQuality(){
-	return m_quality;
+	return mQuality;
 }
 
-//setter and getter definition for m_power
+//setter and getter definition for mPower
 void SecurityCamera::setPower(std::string power) {
-	m_power = power;
+	mPower = power;
 }
 std::string SecurityCamera::getPower() {
-	return m_power;
+	return mPower;
 }
 
 void SecurityCamera::interactionEvent() { //override
