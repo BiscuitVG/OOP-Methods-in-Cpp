@@ -8,17 +8,20 @@ WarmCold::WarmCold(int id, std::string deviceName, std::string deviceManufacture
 	: SmartLight(id, deviceName, deviceManufacturer, status, brightness){
 	setColorType(colorType);
 }
+
+//setter and getter definition for mColorType
 void WarmCold::setColorType(std::string colorType) {
 	if (colorType == "Warm" || colorType == "Cold") {
-		m_colorType = colorType;
+		mColorType = colorType;
 	}
 	else {
 		std::cout << "Color type must be either 'Warm' or 'Cold'" << std::endl;
 	}
 }
 std::string WarmCold::getColorType() {
-	return m_colorType;
+	return mColorType;
 }
+
 void WarmCold::interactionEvent() {
 	if (getStatus() == true) {
 		std::cout << getDeviceName() << " is set to " << getColorType() << " - with a brightness level: " << getBrightness() << std::endl;

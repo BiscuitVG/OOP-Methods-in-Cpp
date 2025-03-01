@@ -10,11 +10,11 @@
 class WarmCold : public SmartLight {
 private:
 
-	std::string m_colorType; //warm or cold
+	std::string mColorType; //warm or cold
 
 public:
 
-	//setter and getter for m_colorType
+	//setter and getter declaration for mColorType
 	void setColorType(std::string colorType);
 	std::string getColorType();
 
