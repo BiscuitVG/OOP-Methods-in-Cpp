@@ -3,12 +3,13 @@
 #include "Device.h"
 #include "SecurityCamera.h"
 
-SecurityCamera::SecurityCamera(int id, const std::string& deviceName, const std::string& deviceManufacturer, bool status = false, const std::string& quality, const std::string& power)
+SecurityCamera::SecurityCamera(int id, std::string deviceName, std::string deviceManufacturer, bool status, std::string quality, std::string power)
 	: Device(id, deviceName, deviceManufacturer, status) {
-	setId(id);
+	/*setId(id);
 	setDeviceName(deviceName);
 	setManufacturer(deviceManufacturer);
-	setStatus(status);
+	setStatus(status);*/
+	//already set by the base class
 
 	//additional attributes
 	setQuality(quality);
@@ -16,18 +17,18 @@ SecurityCamera::SecurityCamera(int id, const std::string& deviceName, const std:
 }
 
 //setter and getter definitions for m_quality
-void SecurityCamera::setQuality(const std::string& quality) {
+void SecurityCamera::setQuality(std::string quality) {
 	m_quality = quality;
 }
-std::string SecurityCamera::getQuality() const {
+std::string SecurityCamera::getQuality(){
 	return m_quality;
 }
 
 //setter and getter definition for m_power
-void SecurityCamera::setPower(const std::string& power) {
+void SecurityCamera::setPower(std::string power) {
 	m_power = power;
 }
-std::string SecurityCamera::getPower() const {
+std::string SecurityCamera::getPower() {
 	return m_power;
 }
 

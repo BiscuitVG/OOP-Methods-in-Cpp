@@ -3,12 +3,14 @@
 #include "Device.h"
 #include "SmartLight.h"
 
-SmartLight::SmartLight(int id, const std::string& deviceName, const std::string& deviceManufacturer, bool status = false, int brightness)
+SmartLight::SmartLight(int id, std::string deviceName, std::string deviceManufacturer, bool status, int brightness)
 	: Device(id, deviceName, deviceManufacturer, status) {
-	setId(id);
+	/*setId(id);
 	setDeviceName(deviceName);
 	setManufacturer(deviceManufacturer);
-	setStatus(status);
+	setStatus(status);*/
+	//set by base class
+
 	//additional attributes
 	setBrightness(brightness);
 }
@@ -23,7 +25,7 @@ void SmartLight::setBrightness(int level) {
 		std::cout << "Invalid input! - Brightness level must be between 0 and 100." << std::endl;
 	}
 }
-int SmartLight::getBrightness() const {
+int SmartLight::getBrightness() {
 	return m_brightness;
 }
 

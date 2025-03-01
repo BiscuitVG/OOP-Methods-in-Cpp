@@ -15,9 +15,9 @@ public:
 
 	//setter and getter declaration for m_brightness
 	void setBrightness(int level);
-	int getBrightness() const;
+	int getBrightness();
 
-	SmartLight(int id, const std::string& deviceName, const std::string& deviceManufacturer, bool status = false, int brightness);
+	SmartLight(int id, std::string deviceName, std::string deviceManufacturer, bool status, int brightness);
 
 	virtual void interactionEvent();
 	virtual void viewInfo();

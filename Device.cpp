@@ -2,7 +2,7 @@
 #include <string>
 #include "Device.h"
 
-Device::Device(int id, const std::string& deviceName, const std::string& deviceManufacturer, bool status = false) {
+Device::Device(int id, std::string deviceName, std::string deviceManufacturer, bool status) {
 	setId(id);
 	setDeviceName(deviceName);
 	setManufacturer(deviceManufacturer);
@@ -13,23 +13,23 @@ Device::Device(int id, const std::string& deviceName, const std::string& deviceM
 void Device::setId(int id) {
 	m_id = id;
 }
-int Device::getId() const {
+int Device::getId(){
 	return m_id;
 }
 
 //setter and getter definition for m_device
-void Device::setDeviceName(const std::string& deviceName) {
+void Device::setDeviceName(std::string deviceName) {
 	m_deviceName = deviceName;
 }
-std::string Device::getDeviceName() const {
+std::string Device::getDeviceName(){
 	return m_deviceName;
 }
 
 //setter and getter definition for m_manufacturer
-void Device::setManufacturer(const std::string& manufacturer) {
+void Device::setManufacturer(std::string manufacturer) {
 	m_manufacturer = manufacturer;
 }
-std::string Device::getManufacturer() const {
+std::string Device::getManufacturer(){
 	return m_manufacturer;
 }
 
@@ -37,7 +37,7 @@ std::string Device::getManufacturer() const {
 void Device::setStatus(bool status) {
 	m_status = status;
 }
-bool Device::getStatus() const {
+bool Device::getStatus(){
 	return m_status;
 }
 

@@ -15,14 +15,14 @@ private:
 public:
 
 	//setter and getter declaration for m_quality
-	void setQuality(const std::string& quality);
-	std::string getQuality() const;
+	void setQuality(std::string quality);
+	std::string getQuality();
 
 	//setter and getter declaration for m_power
-	void setPower(const std::string& power);
-	std::string getPower() const;
+	void setPower(std::string power);
+	std::string getPower();
 
-	SecurityCamera(int id, const std::string& deviceName, const std::string& deviceManufacturer, bool status = false, const std::string& quality, const std::string& power);
+	SecurityCamera(int id, std::string deviceName, std::string deviceManufacturer, bool status, std::string quality, std::string power);
 
 	/*virtual void interactionEvent() override { //you dont define them in header in the child class
 		if (getStatus() == true) {
