@@ -9,53 +9,53 @@ Device::Device(int id, std::string deviceName, std::string deviceManufacturer, b
 	setStatus(status);
 }
 
-//setter and getter definition for m_id
+//setter and getter definition for mId
 void Device::setId(int id) {
-	m_id = id;
+	mDeviceId = id;
 }
 int Device::getId(){
-	return m_id;
+	return mDeviceId;
 }
 
-//setter and getter definition for m_device
+//setter and getter definition for mDeviceName
 void Device::setDeviceName(std::string deviceName) {
-	m_deviceName = deviceName;
+	mDeviceName = deviceName;
 }
 std::string Device::getDeviceName(){
-	return m_deviceName;
+	return mDeviceName;
 }
 
-//setter and getter definition for m_manufacturer
+//setter and getter definition for mManufacturer
 void Device::setManufacturer(std::string manufacturer) {
-	m_manufacturer = manufacturer;
+	mManufacturer = manufacturer;
 }
 std::string Device::getManufacturer(){
-	return m_manufacturer;
+	return mManufacturer;
 }
 
 //setter and getter definition for m_status (bool)
 void Device::setStatus(bool status) {
-	m_status = status;
+	mStatus = status;
 }
 bool Device::getStatus(){
-	return m_status;
+	return mStatus;
 }
 
 void Device::activate() {
-	if (m_status == false) { //device is not active
-		m_status = true;
-		std::cout << m_deviceName << " has been activated!" << std::endl;
+	if (mStatus == false) { //device is not active
+		mStatus = true;
+		std::cout << mDeviceName << " has been activated!" << std::endl;
 	}
 	else {
-		std::cout << m_deviceName << "  is already active!" << std::endl;
+		std::cout << mDeviceName << "  is already active!" << std::endl;
 	}
 }
 void Device::deactivate() {
-	if (m_status == true) { //device is active
-		m_status = false;
-		std::cout << m_deviceName << " has been deactivated!" << std::endl;
+	if (mStatus == true) { //device is active
+		mStatus = false;
+		std::cout << mDeviceName << " has been deactivated!" << std::endl;
 	}
 	else {
-		std::cout << m_deviceName << " is already deactivated!" << std::endl;
+		std::cout << mDeviceName << " is already deactivated!" << std::endl;
 	}
 }

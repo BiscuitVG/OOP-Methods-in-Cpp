@@ -8,27 +8,27 @@
 class Device {
 private:
 
-	int m_id;
-	std::string m_deviceName;
-	std::string m_manufacturer;
-	bool m_status;
+	int mDeviceId;
+	std::string mDeviceName;
+	std::string mManufacturer;
+	bool mStatus;
 
 public:
 
-	//setters and getter for m_id
+	//setters and getter for mDeviceId
 	void setId(int id);
 	int getId();
 
-	//setter and getter for m_deviceName
+	//setter and getter for mDeviceName
 	void setDeviceName(std::string deviceName); //pass by reference: no additional copies
 	std::string getDeviceName();
 
-	//setter and getter for m_manufacturer
+	//setter and getter for mManufacturer
 	void setManufacturer(std::string manufacturer);
 
 	std::string getManufacturer();
 
-	//setter and getter for m_status (bool value!)
+	//setter and getter for mStatus (bool value!)
 	void setStatus(bool status);
 	bool getStatus();
 
