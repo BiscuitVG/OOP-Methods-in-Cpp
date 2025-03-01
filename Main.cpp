@@ -4,6 +4,7 @@
 #include "SecurityCamera.h"
 #include "SmartLight.h"
 #include "WarmCold.h"
+#include "RGBColor.h"
 
 int main() {
     // Test SecurityCamera class
@@ -42,6 +43,30 @@ int main() {
     warmLight.viewInfo();
     warmLight.deactivate();
     warmLight.viewInfo();
+    std::cout << " " << std::endl;
+
+    // Test RGBColor class
+    std::cout << "Test RGBColorClass" << std::endl;
+    RGBColor rgbLight(6, "RGBLight1", "LightManufacturer", false, 80, 255, 100, 50);
+    rgbLight.viewInfo();
+
+    // Activate the device and test interaction
+    rgbLight.activate();
+    rgbLight.interactionEvent();
+
+    // Change RGB values and test interaction
+    rgbLight.setRedColor(150);
+    rgbLight.setGreenColor(200);
+    rgbLight.setBlueColor(255);
+    rgbLight.interactionEvent();
+
+    // Test invalid RGB value
+    rgbLight.setRedColor(300); // Invalid input test
+    rgbLight.interactionEvent();
+
+    // Deactivate the device
+    rgbLight.deactivate();
+    rgbLight.viewInfo();
     std::cout << " " << std::endl;
 
     return 0;

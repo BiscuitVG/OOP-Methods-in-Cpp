@@ -10,9 +10,9 @@
 class RGBColor : public SmartLight {
 private:
 	//RGB code 0-255
-	int m_colorRed;
-	int m_colorGreen;
-	int m_colorBlue;
+	int mColorRed;
+	int mColorGreen;
+	int mColorBlue;
 
 public:
 
