@@ -24,7 +24,11 @@ std::string WarmCold::getColorType() {
 
 void WarmCold::interactionEvent() {
 	if (getStatus() == true) {
-		std::cout << getDeviceName() << " is set to " << getColorType() << " - with a brightness level: " << getBrightness() << std::endl;
+		std::string userColorType;
+		std::cout << "Enter new color type (Warm/Cold): ";
+		std::getline(std::cin >> std::ws, userColorType); //std::ws is an input manipulator which ignores leading whitespaces
+		setColorType(userColorType);
+		std::cout << getDeviceName() << " is set to " << getColorType() << " with brightness level: " << getBrightness() << std::endl;
 	}
 	else {
 		std::cout << getDeviceName() << " is NOT active!" << std::endl;

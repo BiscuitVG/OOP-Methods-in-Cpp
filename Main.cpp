@@ -19,19 +19,19 @@ int main() {
     //camera.viewInfo();
     //std::cout << " " << std::endl;
 
-    // Test SmartLight class
-    std::cout << "Test SmartLight class" << std::endl;
-    SmartLight light(3, "Light1", "LightManufacturer", false, 50);
-    light.viewInfo();
-    light.activate();
-    light.interactionEvent();
-    light.setBrightness(75);
-    light.interactionEvent();
-    light.setBrightness(150); // Invalid input test
-    light.viewInfo();
-    light.deactivate();
-    light.viewInfo();
-    std::cout << " " << std::endl;
+    //// Test SmartLight class
+    //std::cout << "Test SmartLight class" << std::endl;
+    //SmartLight light(3, "Light1", "LightManufacturer", false, 50);
+    //light.viewInfo();
+    //light.activate();
+    //light.interactionEvent();
+    //light.setBrightness(75);
+    //light.interactionEvent();
+    //light.setBrightness(150); // Invalid input test
+    //light.viewInfo();
+    //light.deactivate();
+    //light.viewInfo();
+    //std::cout << " " << std::endl;
 
     //// Test WarmCold class
     //std::cout << "Test WarmCold class" << std::endl;
@@ -47,29 +47,29 @@ int main() {
     //warmLight.viewInfo();
     //std::cout << " " << std::endl;
 
-    ////Test RGBColor class
-    //std::cout << "Test RGBColor Class" << std::endl;
-    //RGBColor rgbLight(6, "RGBLight1", "LightManufacturer", false, 80, 255, 100, 50);
-    //rgbLight.viewInfo();
+    //Test RGBColor class
+    std::cout << "Test RGBColor Class" << std::endl;
+    RGBColor rgbLight(6, "RGBLight1", "LightManufacturer", false, 80, 255, 100, 50);
+    rgbLight.viewInfo();
 
-    ////Activate the device and test interaction
-    //rgbLight.activate();
-    //rgbLight.interactionEvent();
+    //Activate the device and test interaction
+    rgbLight.activate();
+    rgbLight.interactionEvent();
 
-    ////Change RGB values and test interaction
-    //rgbLight.setRedColor(150);
-    //rgbLight.setGreenColor(200);
-    //rgbLight.setBlueColor(255);
-    //rgbLight.interactionEvent();
+    //Change RGB values and test interaction
+    rgbLight.setRedColor(150);
+    rgbLight.setGreenColor(200);
+    rgbLight.setBlueColor(255);
+    rgbLight.interactionEvent();
 
-    ////Test invalid RGB value
-    //rgbLight.setRedColor(300); // Invalid input test
-    //rgbLight.interactionEvent();
+    //Test invalid RGB value
+    rgbLight.setRedColor(300); // Invalid input test
+    rgbLight.interactionEvent();
 
-    ////Deactivate the device
-    //rgbLight.deactivate();
-    //rgbLight.viewInfo();
-    //std::cout << " " << std::endl;
+    //Deactivate the device
+    rgbLight.deactivate();
+    rgbLight.viewInfo();
+    std::cout << " " << std::endl;
 
     //// Test Thermostat class
     //std::cout << "Test Thermostat Class" << std::endl;

@@ -52,7 +52,18 @@ int RGBColor::getBlueColor() {
 
 void RGBColor::interactionEvent() {
 	if (getStatus() == true) {
-		std::cout << getDeviceName() << " is set to RGB value: " << getRedColor() << " " << getGreenColor() << " " << getBlueColor() << std::endl;
+		int userRed;
+		int userGreen;
+		int userBlue;
+
+		std::cout << "Enter new RGB values (0-255): ";
+		std::cin >> userRed >> userGreen >> userBlue;
+
+		setRedColor(userRed);
+		setGreenColor(userGreen);
+		setBlueColor(userBlue);
+
+		std::cout << getDeviceName() << " is set to RGB color:" << getRedColor() << " " << getGreenColor() << " " << getBlueColor() << std::endl;
 	}
 	else {
 		std::cout << getDeviceName() << " is NOT active!" << std::endl;
