@@ -5,6 +5,7 @@
 #include "SmartLight.h"
 #include "WarmCold.h"
 #include "RGBColor.h"
+#include "Thermostat.h"
 
 int main() {
     // Test SecurityCamera class
@@ -46,7 +47,7 @@ int main() {
     std::cout << " " << std::endl;
 
     // Test RGBColor class
-    std::cout << "Test RGBColorClass" << std::endl;
+    std::cout << "Test RGBColor Class" << std::endl;
     RGBColor rgbLight(6, "RGBLight1", "LightManufacturer", false, 80, 255, 100, 50);
     rgbLight.viewInfo();
 
@@ -68,6 +69,18 @@ int main() {
     rgbLight.deactivate();
     rgbLight.viewInfo();
     std::cout << " " << std::endl;
+
+    // Test Thermostat class
+    std::cout << "Test Thermostat Class" << std::endl;
+    Thermostat thermostat(5, "Thermostat1", "ThermostatManufacturer", false, 22);
+    thermostat.viewInfo();
+    thermostat.activate();
+    thermostat.interactionEvent();
+    thermostat.setTargetTemp(35); // Invalid input test
+    thermostat.interactionEvent();
+    thermostat.viewInfo();
+    thermostat.deactivate();
+    thermostat.viewInfo();
 
     return 0;
 }
