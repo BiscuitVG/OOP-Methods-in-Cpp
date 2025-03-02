@@ -23,6 +23,10 @@ int SmartSpeaker::getVolume() {
 
 void SmartSpeaker::interactionEvent() {
 	if (getStatus() == true) {
+		int userVolume;
+		std::cout << "Enter volume level (0 - 100): ";
+		std::cin >> userVolume;
+		setVolume(userVolume);
 		std::cout << getDeviceName() << " volume is set to: " << getVolume() << std::endl;
 	}
 	else {

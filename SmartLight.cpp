@@ -30,11 +30,15 @@ int SmartLight::getBrightness() {
 }
 
 void SmartLight::interactionEvent() {
-	if (getStatus() == true) { 
-		std::cout << getDeviceName() << " is set to level: " << getBrightness() << std::endl;
+	if (getStatus() == true) {
+		int userBrightness;
+		std::cout << "Enter brightness level (0 - 100): ";
+		std::cin >> userBrightness;
+		setBrightness(userBrightness);
+		std::cout << getDeviceName() << " is set to brightness level: " << getBrightness() << std::endl;
 	}
 	else {
-		std::cout << getDeviceName() << " is not active!" << std::endl;
+		std::cout << getDeviceName() << " is NOT active!" << std::endl;
 	}
 }
 void SmartLight::viewInfo() {

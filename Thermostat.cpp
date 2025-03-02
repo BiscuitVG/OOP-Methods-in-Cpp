@@ -23,6 +23,10 @@ int Thermostat::getTargetTemp() {
 
 void Thermostat::interactionEvent() {
 	if (getStatus() == true) {
+		int userTemp; //temp var for user input
+		std::cout << "Enter target temperature: ";
+		std::cin >> userTemp;
+		setTargetTemp(userTemp);
 		std::cout << getDeviceName() << " is set to target temperature: " << getTargetTemp() << " degrees Celsius." << std::endl;
 	}
 	else {
