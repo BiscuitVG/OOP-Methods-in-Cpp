@@ -6,6 +6,7 @@
 #include "WarmCold.h"
 #include "RGBColor.h"
 #include "Thermostat.h"
+#include "SmartSpeaker.h"
 
 int main() {
     // Test SecurityCamera class
@@ -81,6 +82,19 @@ int main() {
     thermostat.viewInfo();
     thermostat.deactivate();
     thermostat.viewInfo();
+    std::cout << " " << std::endl;
+
+    // Test SmartSpeaker class
+    std::cout << "Test SmartSpeaker Class" << std::endl;
+    SmartSpeaker speaker(6, "Speaker1", "SpeakerManufacturer", false, 70);
+    speaker.viewInfo();
+    speaker.activate();
+    speaker.interactionEvent();
+    speaker.setVolume(120); // Invalid input test
+    speaker.interactionEvent();
+    speaker.viewInfo();
+    speaker.deactivate();
+    speaker.viewInfo();
 
     return 0;
 }
