@@ -11,12 +11,14 @@ void DeviceManager::addDevice(Device* device) {
 void DeviceManager::activateAll() {
     for (int i = 0; i < mDevices.size(); i++) {
         mDevices[i]->activate();
+        std::cout << "------------------------" << std::endl;
     }
 }
 
 void DeviceManager::deactivateAll() {
     for (int i = 0; i < mDevices.size(); i++) {
         mDevices[i]->deactivate();
+        std::cout << "------------------------" << std::endl;
     }
 }
 

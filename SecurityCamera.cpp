@@ -37,7 +37,7 @@ void SecurityCamera::interactionEvent() { //override
 		std::cout << "Now viewing camera: " << getDeviceName() << std::endl;
 	}
 	else {
-		std::cout << getDeviceName() << " is not activated!" << std::endl;
+		std::cout << getDeviceName() << " is NOT active!" << std::endl;
 	}
 }
 void SecurityCamera::viewInfo() {
