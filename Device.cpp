@@ -42,7 +42,7 @@ bool Device::getStatus(){
 }
 
 void Device::activate() {
-	if (mStatus == false) { //device is not active
+	if (mStatus == false) { //device is de-activated make it active
 		mStatus = true;
 		std::cout << mDeviceName << " has been activated!" << std::endl;
 	}
@@ -51,7 +51,7 @@ void Device::activate() {
 	}
 }
 void Device::deactivate() {
-	if (mStatus == true) { //device is active
+	if (mStatus == true) { //device is active make it de-activated
 		mStatus = false;
 		std::cout << mDeviceName << " has been deactivated!" << std::endl;
 	}
