@@ -21,14 +21,30 @@ private:
 public:
 
     std::vector<Device*>& getDevice();
+    /*
+        returns a reference to the vector.
+        Since it's a reference, can modify the contents of mDevices directly.
+        Allows DeviceManager to modify devices dynamically created using the pointer.
+    */
 
-	//methods access all derived class methods using the vector
+	//below methods iterates through all the device stored in the vector and calls their relevant class methods
+
     void activateAll();
+
     void deactivateAll();
+
     void interactionEventAll();
+
     void viewInfoAll();
+
     void displayMenu();
-    bool switchCaseInput(int choice); //return type set to bool condition to break out of the loop
+
+    bool switchCaseInput(int choice);
+    /*
+        Returns a bool value based on the user input.
+        Takes the user input an carry out the respective case which will carry out the releavnt class method for each device.
+        When the user selects to exit the program, will return true which will break out of the loop. Else will keep looping.
+    */
 	
 };
 

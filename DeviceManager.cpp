@@ -4,8 +4,8 @@
 #include "DeviceManager.h"
 
 
-std::vector<Device*>& DeviceManager::getDevice() {
-    return mDevices;
+std::vector<Device*>& DeviceManager::getDevice() { //stores pointers to objects(devices)
+    return mDevices; //returns refernce to the vector
 }
 
 void DeviceManager::activateAll() {
