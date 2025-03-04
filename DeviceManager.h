@@ -20,8 +20,9 @@ private:
 
 public:
 
+    std::vector<Device*>& getDevice();
+
 	//methods access all derived class methods using the vector
-    void addDevice(Device* device); //pointer to object
     void activateAll();
     void deactivateAll();
     void interactionEventAll();

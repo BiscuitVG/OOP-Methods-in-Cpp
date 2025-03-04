@@ -9,23 +9,23 @@
 
 int main() {
    
-	DeviceManager manager;
+	DeviceManager device;
 
     // Create devices dynamically
-    manager.addDevice(new SecurityCamera(1, "DSLR Camera", "CamManufacturer", false, "1080p", "battery"));
-    manager.addDevice(new SmartLight(2, "Light1", "LightManufacturer", false, 50));
-    manager.addDevice(new WarmCold(2, "WarmLight1", "LightManufacturer", false, 60, "Warm"));
-    manager.addDevice(new RGBColor(2, "RGBLight1", "LightManufacturer", false, 70, 255, 0, 0));
-    manager.addDevice(new Thermostat(3, "Thermostat1", "ThermostatManufacturer", false, 22));
-    manager.addDevice(new SmartSpeaker(4, "Speaker1", "SpeakerManufacturer", false, 70));
+    device.getDevice().push_back(new SecurityCamera(1, "DSLR Camera", "CamManufacturer", false, "1080p", "battery"));
+    device.getDevice().push_back(new SmartLight(2, "Light1", "LightManufacturer", false, 50));
+    device.getDevice().push_back(new WarmCold(2, "WarmLight1", "LightManufacturer", false, 60, "Warm"));
+    device.getDevice().push_back(new RGBColor(2, "RGBLight1", "LightManufacturer", false, 70, 255, 255, 255));
+    device.getDevice().push_back(new Thermostat(3, "Thermostat1", "ThermostatManufacturer", false, 22));
+    device.getDevice().push_back(new SmartSpeaker(4, "Speaker1", "SpeakerManufacturer", false, 70));
 
     int choice;
     bool exitProgram = false; //menu will be looping till false
 
     while (!exitProgram) {
-        manager.displayMenu();
+        device.displayMenu();
         std::cin >> choice;
-        exitProgram = manager.switchCaseInput(choice);
+        exitProgram = device.switchCaseInput(choice);
     }
 
     return 0;

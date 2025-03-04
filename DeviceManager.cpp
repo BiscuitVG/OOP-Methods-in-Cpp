@@ -4,8 +4,8 @@
 #include "DeviceManager.h"
 
 
-void DeviceManager::addDevice(Device* device) {
-    mDevices.push_back(device);
+std::vector<Device*>& DeviceManager::getDevice() {
+    return mDevices;
 }
 
 void DeviceManager::activateAll() {
