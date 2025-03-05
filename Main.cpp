@@ -11,16 +11,17 @@ int main() {
    
 	DeviceManager device; //instance of the DeviceManager to manage the objects
 
-    device.getDevice().push_back(new SecurityCamera(1, "DSLR Camera", "CamManufacturer", false, "1080p", "battery"));
-    device.getDevice().push_back(new SmartLight(2, "Light1", "LightManufacturer", false, 50));
-    device.getDevice().push_back(new WarmCold(2, "WarmLight1", "LightManufacturer", false, 60, "Warm"));
-    device.getDevice().push_back(new RGBColor(2, "RGBLight1", "LightManufacturer", false, 70, 255, 255, 255));
-    device.getDevice().push_back(new Thermostat(3, "Thermostat1", "ThermostatManufacturer", false, 22));
-    device.getDevice().push_back(new SmartSpeaker(4, "Speaker1", "SpeakerManufacturer", false, 70));
+    device.getDevice().push_back(new SecurityCamera(1, "DSLR Camera", "Cannon", false, "1080p", "battery"));
+    device.getDevice().push_back(new SmartLight(2, "Philips Hue", "Philips", false, 50));
+    device.getDevice().push_back(new WarmCold(2, "WarmCold Mode", "Philips", false, 60, "Warm"));
+    device.getDevice().push_back(new RGBColor(2, "RGB Mode", "Philips", false, 70, 255, 255, 255));
+    device.getDevice().push_back(new Thermostat(3, "Nest Thermostat", "Google", false, 22));
+    device.getDevice().push_back(new SmartSpeaker(4, "JBL PartyBox", "HARMAN", false, 70));
     /*
-        Each push_back() dynamically allocates memory per object and adds it to mDevices,
+    * Dynamically create instances of various device types using 'new' to allocate memory on the heap.
+    * Each device is initialized with both base class parameters and additional.
+    * Each push_back() dynamically allocates memory per object and adds it to mDevices,
         this will add the pointer to the vector.
-        mDevices stores a pointer that points to the releavant object created(ex: SmartSpeaker).
     */
 
     int choice;

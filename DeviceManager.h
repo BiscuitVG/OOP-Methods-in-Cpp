@@ -16,15 +16,15 @@
 class DeviceManager {
 private:
 
-	std::vector<Device*> mDevices;
+	std::vector<Device*> mDevices; //mDevices stores a pointer that points to the releavant object created(ex: SmartSpeaker).
 
 public:
 
     std::vector<Device*>& getDevice();
     /*
-        returns a reference to the vector.
-        Since it's a reference, can modify the contents of mDevices directly.
-        Allows DeviceManager to modify devices dynamically created using the pointer.
+    * returns a reference to the vector.
+    * Since it's a reference, can modify the contents of mDevices directly.
+    * Allows DeviceManager to modify devices dynamically created using the pointer.
     */
 
 	//below methods iterates through all the device stored in the vector and calls their relevant class methods
@@ -41,9 +41,9 @@ public:
 
     bool switchCaseInput(int choice);
     /*
-        Returns a bool value based on the user input.
-        Takes the user input an carry out the respective case which will carry out the releavnt class method for each device.
-        When the user selects to exit the program, will return true which will break out of the loop. Else will keep looping.
+    * Returns a bool value based on the user input.
+    * Takes the user input an carry out the respective case which will carry out the releavnt class method for each device.
+    * When the user selects to exit the program, will return true which will break out of the loop. Else will keep looping.
     */
 	
 };
