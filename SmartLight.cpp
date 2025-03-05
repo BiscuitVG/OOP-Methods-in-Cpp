@@ -18,7 +18,7 @@ SmartLight::SmartLight(int id, std::string deviceName, std::string deviceManufac
 //setter and getter definitions for mBrightness
 void SmartLight::setBrightness(int level) {
 	//mBrightness = level;
-	if (level >= 0 && level <= 100) { //input validation
+	if (level >= 0 && level <= 100) { //Basic input validation
 		mBrightness = level;
 	}
 	else {

@@ -20,7 +20,7 @@ public:
 	int getId();
 
 	//setter and getter for mDeviceName
-	void setDeviceName(std::string deviceName); //pass by reference: no additional copies
+	void setDeviceName(std::string deviceName);
 	std::string getDeviceName();
 
 	//setter and getter for mManufacturer
@@ -34,12 +34,12 @@ public:
 
 	Device(int id, std::string deviceName, std::string deviceManufacturer, bool status); //constructor declaration
 	//class methods
-	void activate();
-	void deactivate();
+	void activate(); //sets the status to true(active)
+	void deactivate(); //sets the staus to false(inactive)
 
-	//pure vr
-	virtual void interactionEvent() = 0;
-	virtual void viewInfo() = 0;
+	//pure virtual function
+	virtual void interactionEvent() = 0; //method must be overridden by derived classes to define specific interaction behavior
+	virtual void viewInfo() = 0; // method must be overridden by derived classes to display device-specific information
 
 };
 #endif // !BASE_DEVICE
